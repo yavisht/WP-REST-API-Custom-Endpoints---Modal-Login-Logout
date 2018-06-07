@@ -74,21 +74,21 @@ function yk_login() {
             // Beautify error
             $login_error = str_replace('_', ' ', $login_error);
             
-            $login_resonse = array(
+            $login_response = array(
                 'status'    => 'failed',
                 'message' => ucwords($login_error),
             );
             
-            return $login_resonse;
+            return $login_response;
 
         } else {
             
-            $login_resonse = array(
+            $login_response = array(
                 'status'    => 'success',
                 'message' => 'Welcome '. $user->data->user_nicename,
             );
 
-            return $login_resonse;
+            return $login_response;
 
         } // End of Error check
         
@@ -96,12 +96,12 @@ function yk_login() {
         
         // For Extra security if someone removes 'required' from form input fields.
 
-        $login_resonse = array(
+        $login_response = array(
             'status'    => 'failed',
             'message' => 'Please make sure you have entered a Username and Password',
         );
         
-        return $login_resonse;
+        return $login_response;
     
     } // End of if check
 
